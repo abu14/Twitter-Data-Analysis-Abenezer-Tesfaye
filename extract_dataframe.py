@@ -39,7 +39,11 @@ class TweetDfExtractor:
         statuses_count 
         
     def find_full_text(self)->list:
-        text = 
+        """
+        This funciton gets the entire text f rom the tweet strings
+        """
+        text = full_text
+        return text 
        
     
     def find_sentiments(self, text)->list:
@@ -47,8 +51,14 @@ class TweetDfExtractor:
         return polarity, self.subjectivity
 
     def find_created_time(self)->list:
+        created_at = []
+        for items in self.tweets_list:
+            created_at.append(items.get('craeted_at',None))
        
         return created_at
+    
+
+
 
     def find_source(self)->list:
         source = 
